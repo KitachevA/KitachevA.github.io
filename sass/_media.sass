@@ -1,0 +1,166 @@
+@media (max-width: 1200px)
+    .menu
+        .menu_item 
+            padding-right: 20px
+        .menu_link 
+            font-size: 13px
+    .promo
+        .promo_header
+            font-size: 50px
+    .reasons
+        .reasons_block
+            align-items: flex-start
+            .reasons_descr 
+                width: 300px
+    footer
+        .second_menu
+            padding-right: 54px
+            padding-left: 31px
+        .first_menu
+            padding: 0
+        .lang
+            margin-top: 15px
+@media (max-width: 991px) //нужно обратить внимание на то сколько тут пикселей. урок про адаптивность
+    .menu
+        .menu_item 
+            padding-right: 8px
+        .menu_link 
+            font-size: 10px
+    .subheader
+        &_logo
+            img
+                width: 100%
+        &_official
+            font-size: 10px
+        &_phone
+            font-size: 20px
+        &_btn
+            margin-top: 20px
+            height: 40px
+    .mobile
+        &_item
+            width: 220px
+    .promo
+        .promo_header
+            font-size: 40px
+        .promo_subheader
+            font-size: 30px
+    .reasons
+        .reasons_block
+            flex-direction: column
+            align-items: center
+            .reasons_descr
+                margin-top: 15px
+                width: 300px
+    @media (max-width: 767px) and (orientation: landscape)
+        .menu
+            position: fixed
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            top: 0
+            left: -100%
+            width: 50%
+            height: 100vh //100% видемого экрана(высоты окна)
+            padding: 20px 15px
+            background-color: rgba(0,0,0, 0.8)
+            transition: 0.6s all
+            &_active
+                left: 0
+                transition: 0.6s all
+            .menu_item
+                padding-right: 0
+                border: none
+                margin: 10px
+                .menu_link
+                    font-size: 20px
+
+        .chose
+            &_secondbg
+                .chose_auto
+                    img
+                        width: 100%
+        
+        .hamburger
+            display: block
+            position: absolute
+            right: 10px
+            top: 50%
+            transform: translateY(-50%)
+            width: 26px
+            height: 12px
+            span
+                display: block //блочные элементы очень жадные, они занимают все пространство своего родителя
+                height: 2px
+                width: 100%
+                background-color: white
+                margin-bottom: 2px
+                transition: 0.5s all
+            &_active
+                span
+                    margin-bottom: -2px
+                    &:nth-child(1)
+                         transform: translateY(3px) rotate(-45deg)
+                    &:nth-child(2)
+                        display: none
+                    &:nth-child(3)
+                        transform: translateY(3px) rotate(45deg)
+        .xs-hidden
+            display: none
+        .xs-visible
+            display: block
+        .subheader
+            &_phone
+                display: block //только когда блок можно нанипулировать m0 auto
+                margin-top: 10px             
+                color: fff
+                text-transform: uppercase
+                font-weight: 400
+                font-size: 16px       
+                text-decoration: none
+                text-align: center    
+            &_btn
+                display: block
+                width: 200px
+                height: 40px
+                margin: 0 auto
+                margin-top: 10px
+        .promo
+            .promo_header
+                line-height: 45px
+    @media (max-width: 575px)
+        .subheader
+            height: 60px
+            &_official
+                display: none                                   
+            &_logo
+                margin-top: 18px
+            &_phone
+                font-weight: 400
+                font-size: 12px
+                text-transform: uppercase
+            &_btn
+                font-weight: 400
+                font-size: 10px
+                width: 110px
+                height: 22px
+        .promo
+            min-height: 400px
+            padding: 102px 0 34px 0
+            .promo_descr
+                display: none
+            .promo_header
+                font-size: 30px
+                padding: 0 24px
+                line-height: 35px
+            .promo_subheader
+                font-size: 20px
+                margin-top: 33px
+                line-height: 30px
+            .promo_btn
+                width: 210px
+                height: 50px
+                margin-top: 72px
+        .menu
+            width: 100%
+
